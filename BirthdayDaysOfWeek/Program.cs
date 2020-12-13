@@ -13,7 +13,7 @@ namespace BirthdayDaysOfWeek
             int repeat = 1;
             while (repeat == 1)
             {
-                //testing git
+                //testing gitasd
                 //creates a dictionary and adds 7 days to it (0-6)
                 Dictionary<int, List<string>> days = new Dictionary<int, List<string>>();
                 for (int d = 0; d < 7; d++)
