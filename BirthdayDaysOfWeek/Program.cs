@@ -40,7 +40,7 @@ namespace BirthdayDaysOfWeek
 
                 //all codes are from https://beginnersbook.com/2013/04/calculating-day-given-date/ under "the key value method"
                 double[] MonthCodes = { 0, 1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6 };
-                double[] CenturyCodes = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 2, 0, 6, 4, 2, 0, 6,
+                double[] CenturyCodes = { 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6,
                                           4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4, 2, 0, 6, 4 };
                 string[] DayNames = { "| Saturday  ", "| Sunday    ", "| Monday    ", "| Tuesday   ",
                                       "| Wednesday ", "| Thursday  ", "| Friday    " };
@@ -139,7 +139,19 @@ namespace BirthdayDaysOfWeek
                     //... [list of years in given day]
                     foreach (string i in Day.Value)
                     {
-                        Console.Write(i + " ");
+                        double DoubleI = System.Convert.ToDouble(i);
+                        double YearsDigitCount = Math.Floor(Math.Log10(DoubleI) + 1);
+                        int Num0 = 0;
+
+                        if (DoubleI == 0)
+                        {
+                            Num0 = 3;
+                        }
+                        else
+                        {
+                            Num0 = System.Convert.ToInt32(4 - YearsDigitCount);
+                        }
+                        Console.Write(string.Concat(Enumerable.Repeat("0", (Num0))) + i + " ");
                     }
 
                     int spaces = 0;
