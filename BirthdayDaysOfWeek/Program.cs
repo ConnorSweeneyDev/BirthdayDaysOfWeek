@@ -175,7 +175,6 @@ namespace BirthdayDaysOfWeek
                         Console.Write("     ");
                     }
                     Console.Write("|");
-                    Console.WriteLine("");
                 }
 
                 //centering the table
