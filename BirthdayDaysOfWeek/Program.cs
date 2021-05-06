@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +8,7 @@ namespace BirthdayDaysOfWeek
     {
         static void Main()
         {
-            Console.SetWindowSize(111, 46);
+            Console.SetWindowSize(111, 14);
 
             int repeat = 1;
             while (repeat == 1)
